@@ -4,9 +4,7 @@
 
 Never use the Debug build for benchmarking. *Never*. The debug version of the target method can run 10–100 times slower. 
 The release mode means that you should have `<Optimize>true</Optimize>` in your csproj file 
-or use [/optimize](https://learn.microsoft.com/dotnet/csharp/language-reference/compiler-options/) for `csc`. Also your never 
-should use an attached debugger (e.g. Visual Studio or WinDbg) during the benchmarking. The best way is 
-build our benchmark in the Release mode and run it from the command line.
+or use [/optimize](https://learn.microsoft.com/dotnet/csharp/language-reference/compiler-options/) for `csc`. Also you should never use an attached debugger (e.g. Visual Studio or WinDbg) during the benchmarking. The best way is to build your benchmark in the Release mode and run it from the command line.
 
 ## Try different environments
 
@@ -38,6 +36,6 @@ double Foo()
 
 ## Power settings and other applications
 
-* Turn off all of the applications except the benchmark process and the standard OS processes. If you run benchmark and work in the Visual Studio at the same time, it can negatively affect to benchmark results.
+* Turn off all of the applications except the benchmark process and the standard OS processes. If you run benchmark and work in the Visual Studio at the same time, it can negatively affect the benchmark results.
 * If you use laptop for benchmarking, keep it plugged in and use the maximum performance mode.
 
